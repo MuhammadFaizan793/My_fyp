@@ -1,614 +1,231 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:loginsignup/Screens/Home/Dashboard/Profile/Funds_details.dart';
 
-class Funding_Screen extends StatelessWidget {
+class Funding_Screen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Fund Raising"),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
+  double screenWidth = MediaQuery.of(context).size.width;
+  double screenHeight = MediaQuery.of(context).size.height;
+    // TODO: implement build
+    return(
+      Scaffold(
+        body: Column(
           children: [
-            Container(
-              width: 360,
-              height: 800,
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(color: Colors.white),
-              child: Stack(
-                children: [
-                  // Positioned(
-                  //   left: 25,
-                  //   top: 37,
-                  //   child: Container(
-                  //     width: 21,
-                  //     height: 10,
-                  //     child: Stack(
-                  //       children: [
-                  //         Positioned(
-                  //           left: 0,
-                  //           top: 0,
-                  //           child: Container(
-                  //             width: 21,
-                  //             height: 4.48,
-                  //             decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
-                  //           ),
-                  //         ),
-                  //         Positioned(
-                  //           left: 0,
-                  //           top: 0,
-                  //           child: Container(
-                  //             width: 21,
-                  //             height: 4.48,
-                  //             decoration: BoxDecoration(color: Colors.black),
-                  //           ),
-                  //         ),
-                  //         Positioned(
-                  //           left: 0,
-                  //           top: 11.52,
-                  //           child: Container(
-                  //             width: 21,
-                  //             height: 4.48,
-                  //             decoration: BoxDecoration(color: Colors.black),
-                  //           ),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  // ),
-                  Positioned(
-                    left: 131,
-                    top: 21,
-                    child: SizedBox(
-                      width: 164,
-                      height: 100,
-                      child: Text(
-                        ' ',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontFamily: 'Lato',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 300,
-                    top: 18,
-                    child: Container(
-                      width: 44,
-                      height: 39,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 44,
-                              height: 39,
-                              decoration: ShapeDecoration(
-                                color: Color(0xFFD9D9D9),
-                                shape: OvalBorder(),
-                              ),
+            Padding(padding: EdgeInsets.only(top: 40.0),
+            child: Center(
+              child:
+              Container(
+                child: TextField(
+                            decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.search),
+                            border: InputBorder.none,
+                            hintText: 'Search',
+                            
                             ),
-                          ),
-                          // Positioned(
-                          //   left: -1,
-                          //   top: -6,
-                          //   child: Container(
-                          //     width: 47,
-                          //     height: 50,
-                          //     decoration: BoxDecoration(
-                          //       image: DecorationImage(
-                          //         image: NetworkImage("https://via.placeholder.com/47x50"),
-                          //         fit: BoxFit.fill,
-                          //       ),
-                          //     ),
-                          //   ),
-                          // ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 35,
-                    top: 67,
-                    child: Container(
-                      width: 285,
-                      height: 36,
-                      decoration: ShapeDecoration(
-                        color: Color(0xFFECE8E8),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 81,
-                    top: 77,
-                    child: Text(
-                      'Search',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 46,
-                    top: 72,
-                    child: Container(
-                      width: 27,
-                      height: 28,
-                      child: Icon(Icons.search),
-                    ),
-                  ),
-                  Positioned(
-                    left: 35,
-                    top: 151,
-                    child: Container(
-                      width: 54.06,
-                      height: 50.32,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 54.06,
-                              height: 50.32,
-                              decoration: ShapeDecoration(
-                                color: Colors.black,
-                                shape: OvalBorder(),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 45.58,
-                            top: 24.74,
-                            child: Transform(
-                              transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(2.39),
-                              child: Container(
-                                width: 26.79,
-                                height: 23.34,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage("https://via.placeholder.com/27x23"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 40,
-                    top: 205,
-                    child: Text(
-                      'Study',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 35,
-                    top: 151,
-                    child: Container(
-                      width: 54.06,
-                      height: 50.32,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 54.06,
-                              height: 50.32,
-                              decoration: ShapeDecoration(
-                                color: Colors.black,
-                                shape: OvalBorder(),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 45.58,
-                            top: 24.74,
-                            child: Transform(
-                              transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(2.39),
-                              child: Container(
-                                width: 26.79,
-                                height: 23.34,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage("https://via.placeholder.com/27x23"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 40,
-                    top: 205,
-                    child: Text(
-                      'Study',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 35,
-                    top: 151,
-                    child: Container(
-                      width: 54.06,
-                      height: 50.32,
-                      decoration: ShapeDecoration(
-                        color: Colors.black,
-                        shape: OvalBorder(),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 40,
-                    top: 205,
-                    child: Text(
-                      'Study',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 159,
-                    top: 151,
-                    child: Container(
-                      width: 54.06,
-                      height: 50.32,
-                      decoration: ShapeDecoration(
-                        color: Color(0xFFFFB82E),
-                        shape: OvalBorder(),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 157,
-                    top: 205.32,
-                    child: Text(
-                      'Human',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 273,
-                    top: 151,
-                    child: Container(
-                      width: 54.06,
-                      height: 50.32,
-                      decoration: ShapeDecoration(
-                        color: Colors.black,
-                        shape: OvalBorder(),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 278,
-                    top: 205,
-                    child: Text(
-                      'Other',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 48,
-                    top: 160,
-                    child: Container(
-                      width: 29,
-                      height: 34,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage("https://via.placeholder.com/29x34"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 163,
-                    top: 154,
-                    child: Container(
-                      width: 46,
-                      height: 46,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage("https://via.placeholder.com/46x46"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 16,
-                    top: 289,
-                    child: Text(
-                      'Featured',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 290,
-                    top: 293,
-                    child: Text(
-                      'See More',
-                      style: TextStyle(
-                        color: Color(0xFF46B3F0),
-                        fontSize: 15,
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        height: 0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 0,
-                    top: 481,
-                    child: Container(
-                      width: 356,
-                      height: 123,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 356,
-                              height: 123,
-                              decoration: ShapeDecoration(
-                                color: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 17,
-                            top: 16,
-                            child: Text(
-                              'Fairwell Party',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontFamily: 'JejuGothic',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 30,
-                            top: 51,
-                            child: Text(
-                              'Description: Fairwell party to all  fyp students\n                      at the end of their degree',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
-                                fontFamily: 'JejuGothic',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 19,
-                            top: 98,
-                            child: Text(
-                              'Amount: Rs 750/-',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontFamily: 'JejuGothic',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 0,
-                    top: 629,
-                    child: Container(
-                      width: 356,
-                      height: 123,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 356,
-                              height: 123,
-                              decoration: ShapeDecoration(
-                                color: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 17,
-                            top: 16,
-                            child: Text(
-                              'Donation for beggers ',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontFamily: 'JejuGothic',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 30,
-                            top: 51,
-                            child: Text(
-                              'Description: This Donation is for beggers \n                      around metro station to support',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
-                                fontFamily: 'JejuGothic',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 19,
-                            top: 98,
-                            child: Text(
-                              'Amount: Rs 30/-',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontFamily: 'JejuGothic',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 288.76,
-                    top: 164,
-                    child: Container(
-                      width: 24.47,
-                      height: 26,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 13.76,
-                            top: 13.76,
-                            child: Container(
-                              width: 10.71,
-                              height: 12.24,
-                              decoration: ShapeDecoration(
-                                color: Color(0x00D9D9D9),
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(width: 2, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 13,
-                            top: 0,
-                            child: Container(
-                              width: 10.71,
-                              height: 12.24,
-                              decoration: ShapeDecoration(
-                                color: Color(0x00D9D9D9),
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(width: 2, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0.76,
-                            top: 13.76,
-                            child: Container(
-                              width: 10.71,
-                              height: 12.24,
-                              decoration: ShapeDecoration(
-                                color: Color(0x00D9D9D9),
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(width: 2, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 10.71,
-                              height: 12.24,
-                              decoration: ShapeDecoration(
-                                color: Color(0x00D9D9D9),
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(width: 2, color: Colors.white),
-                                  borderRadius: BorderRadius.circular(3),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+          ),
+          margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
+          decoration: BoxDecoration(
+            border: Border.all(width: 0.5, color: Color(0xff4196E3)),
+            borderRadius: BorderRadius.circular(10)
+          ),
+          ) 
+              
             ),
-          ],
-        ),
-      ),
+            ),
+            Row(
+              children: [
+                InkWell(
+                  child:  Column(
+                  children: [
+                    Container(
+                      width: 40,height: 40,
+                      child: Center(
+                        child: Icon(Icons.edit, color: Colors.white,),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xff4196E3),
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        margin: EdgeInsets.only(left: 70, top: 20,right: 20),    
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 50),
+                    child: Center(child:Text("Study",
+                    style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)
+                    ),
+                    )
+                  ],
+                ),
+                onTap: () => print("Tap on Study"),
+                ),
+                InkWell(child: Column(
+                  children: [
+                    Container(
+                      width: 40,height: 40,
+                      child: Center(
+                        child:  Icon(Icons.mood,color: Colors.white,),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 0, 0, 255),
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        margin: EdgeInsets.only(left: 20, top: 20,right: 20),    
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 10),
+                    child: Center(child:Text("Human",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)),)
+                    
+                  ],
+                ),
+                onTap: () => print("Tap on Human"),
+                ),
+                InkWell(child: Column(
+                  children: [
+                    Container(
+                      width: 40,height: 40,
+                      child: Center(
+                        child: Icon(Icons.view_comfy_alt,color: Colors.white,),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xff4196E3),
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        margin: EdgeInsets.only(left: 20, top: 20,right: 20),    
+                    ),
+                    Padding(padding: EdgeInsets.only(left: 5),
+                    child: Center(child:Text("Others",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)),)
+                    ],
+                ),
+                onTap:() =>  print("Tap on Others")
+                ,)
+                 
+              ],
+            ),
+            Padding(padding: EdgeInsets.only(left: 10,right: 10,top: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              Text("Featured",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+              InkWell(child: Text("See More",
+              style: TextStyle(color: Color(0xff4196E3)),)
+              ,onTap: () => print("See more is Pressed"),
+
+              ),
+            ],)
+            ),
+            InkWell(child: Container(
+            margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
+            width: screenWidth+20,height: screenHeight/6,
+            decoration:BoxDecoration(
+              borderRadius:BorderRadius.circular(15),
+              border: Border.all(width: 0.3,color: Color(0xff4196E3)),
+              color: Color.fromARGB(255, 215, 239, 242), ),
+              child: Column(
+                children: 
+              [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: 
+                  Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("University Seminar",
+                  style: TextStyle(fontSize: screenWidth/22,fontWeight: FontWeight.bold),
+                  ),
+                  )
+                ),
+                Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Description: Wireshark Packet Trace and Analytics ", 
+                style: TextStyle(fontSize: screenWidth/25),)
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: 
+                  Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Amount: Rs 50/-",
+                  style: TextStyle(fontSize: screenWidth/21,fontWeight: FontWeight.bold),
+                  ),
+                  )
+                ),
+                ],),
+            ),
+            onTap: () => Navigator.of(context, rootNavigator: true).push(                          
+              MaterialPageRoute(builder: (context) => Funds_details())),)
+            ,
+            InkWell(child: Container(
+            margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
+            width: screenWidth+20,height: screenHeight/6,
+            decoration:BoxDecoration(
+              borderRadius:BorderRadius.circular(15),
+              border: Border.all(width: 0.3,color: Color(0xff4196E3)),
+              color: Color.fromARGB(255, 215, 239, 242), ),
+              child: Column(
+                children: 
+              [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: 
+                  Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Donation For Beggers",
+                  style: TextStyle(fontSize: screenWidth/22,fontWeight: FontWeight.bold),
+                  ),
+                  )
+                ),
+                Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Description: This Donation is for beggers around metro station to support", 
+                style: TextStyle(fontSize: screenWidth/25),)
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: 
+                  Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Amount: Rs 20/-",
+                  style: TextStyle(fontSize: screenWidth/21,fontWeight: FontWeight.bold),
+                  ),
+                  )
+                ),
+                ],),
+            ),
+            onTap:() => Navigator.of(context, rootNavigator: true).push(                          
+              MaterialPageRoute(builder: (context) => Funds_details())),
+            ),
+            InkWell(child: Container(
+            margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
+            width: screenWidth+20,height: screenHeight/6,
+            decoration:BoxDecoration(
+              borderRadius:BorderRadius.circular(15),
+              border: Border.all(width: 0.3,color: Color(0xff4196E3)),
+              color: Color.fromARGB(255, 215, 239, 242), ),
+              child: Column(
+                children: 
+              [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: 
+                  Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Fair Well Party",
+                  style: TextStyle(fontSize: screenWidth/22,fontWeight: FontWeight.bold),
+                  ),
+                  )
+                ),
+                Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Description: Fair Well party to last Year Students at the end of their degree ", 
+                style: TextStyle(fontSize: screenWidth/25),)
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: 
+                  Padding(padding: EdgeInsets.only(left: 10,top: 5),
+                  child: Text("Amount: Rs 200/-",
+                  style: TextStyle(fontSize: screenWidth/21,fontWeight: FontWeight.bold),
+                  ),
+                  )
+                ),
+                ],),
+            ),
+            onTap: () =>  Navigator.of(context, rootNavigator: true).push(                          
+              MaterialPageRoute(builder: (context) => Funds_details())),
+              ),
+          ]),
+      )
     );
   }
+
 }

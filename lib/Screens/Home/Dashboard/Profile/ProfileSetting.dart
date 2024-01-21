@@ -110,16 +110,7 @@ class Profile_Setting extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Container(
-                width: 300,
-                height: 180,
-                child: Image.asset('assets/images/logo_org 1.png'),
-              ),
-            ),
+            
             buildListTile('Profile', Icons.person, () {
                Navigator.push(context, MaterialPageRoute(builder: (context)=>User_Profile()));
             }),
