@@ -97,6 +97,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:loginsignup/Screens/Home/Dashboard/Chat/Chat2.dart';
 
 import 'Funding.dart';
 import 'User_Profile.dart';
@@ -112,13 +113,13 @@ class Profile_Setting extends StatelessWidget {
           children: [
             
             buildListTile('Profile', Icons.person, () {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>User_Profile()));
+               //Navigate to update profile screen
             }),
             buildListTile('Networking', Icons.people, () {
               // Navigate to networking screen (add your navigation logic)
             }),
             buildListTile('Messaging', Icons.message, () {
-              // Navigate to messaging screen (add your navigation logic)
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
             }),
             buildListTile('Events', Icons.event, () {
               // Navigate to events screen (add your navigation logic)
@@ -127,7 +128,7 @@ class Profile_Setting extends StatelessWidget {
               // Navigate to job listings screen (add your navigation logic)
             }),
             buildListTile('Mentorship', Icons.school, () {
-              // Navigate to mentorship screen (add your navigation logic)
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>User_Profile()));
             }),
             buildListTile('Donations and Fundraising', Icons.monetization_on, () {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Funding_Screen()));
