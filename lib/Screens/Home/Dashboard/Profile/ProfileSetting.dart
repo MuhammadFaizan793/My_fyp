@@ -119,7 +119,7 @@ class Profile_Setting extends StatelessWidget {
               // Navigate to networking screen (add your navigation logic)
             }),
             buildListTile('Messaging', Icons.message, () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+             //logic for messaging screens
             }),
             buildListTile('Events', Icons.event, () {
               // Navigate to events screen (add your navigation logic)
